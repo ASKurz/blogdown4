@@ -151,10 +151,15 @@ enableEmoji = true
     title = "Pubications"
     url = "/publication/"
     weight = 6
+#  [[menu.header]]
+#    name = "Elements"
+#    title = "Element Page"
+#    url = "/elements/"
+#    weight = 7
   [[menu.header]]
-    name = "Elements"
-    title = "Element Page"
-    url = "/elements/"
+    name = "CV"
+    title = "CV"
+    url = "/cv/Kurz_CV.pdf"
     weight = 7
     
   # Configure footer  
