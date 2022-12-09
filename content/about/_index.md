@@ -1,7 +1,7 @@
 ---
 cascade:
   headless: true
-description: |
+description: A. Solomon Kurz's personal website
   A website template for Hugo developed by RStudio & Formspree and available for free.
 show_header: true
 sidebar_left: false
