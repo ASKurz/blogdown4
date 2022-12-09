@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://luxury-alfajores-ec0741.netlify.app/"
 theme = "hugo-apero"
 languageCode = "en"
 title = "A. Solomon Kurz" # Website name, which lives as meta data
