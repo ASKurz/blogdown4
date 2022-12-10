@@ -4,8 +4,8 @@ subtitle: A workshop through Physalia Courses
 author: A. Solomon Kurz 
 categories:
 - workshop
-date: "2021-01-12"
-date_end: "2021-01-13"
+date: "2023-03-20T08:00:00"
+date_end: "2023-03-24T13:00:00"
 draft: false
 event:
 event_url:
