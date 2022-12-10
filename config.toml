@@ -141,11 +141,11 @@ enableEmoji = true
     title = "Workshops"
     url = "/workshop/"
     weight = 4
-  [[menu.header]]
-    name = "A collection"
-    title = "A collection"
-    url = "/collection/"
-    weight = 5
+#  [[menu.header]]
+#    name = "A collection"
+#    title = "A collection"
+#    url = "/collection/"
+#    weight = 5
 #  [[menu.header]]
 #    name = "Pubications"
 #    title = "Pubications"
