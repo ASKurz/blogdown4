@@ -9,8 +9,7 @@ date_end: "2021-03-24T13:00:00"
 draft: false
 event:
 event_url:
-excerpt: Here is a talk I gave on making awesome personal websites using Hugo, blogdown,
-  GitHub, and Netlify.
+excerpt: In partnership with Physalia Course, this will be my first introductory Bayesian statistics workshop since grad school.
 featured: true
 layout: single
 links:
