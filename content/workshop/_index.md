@@ -2,6 +2,7 @@
 author: A. Solomon Kurz
 type: talk
 cascade:
+  type: talk
   author: A. Solomon Kurz
   show_author_byline: true
   show_comments: false
@@ -11,7 +12,6 @@ cascade:
     show_sidebar_adunit: false
     text_link_label: View recent talks
     text_link_url: /workshop/
-  type: talk
 description: This is a list of my past and upcoming workshops. It's sparse now, but I expect it to fill out in the near future.
 layout: list
 show_author_byline: true
@@ -20,6 +20,7 @@ show_post_date: true
 show_post_thumbnail: true
 show_post_time: true
 sidebar:
+  type: talk
   author: A. Solomon Kurz
   description: This is a list of my past and upcoming workshops. It's sparse now, but I expect it to fill out in the near future.
   show_sidebar_adunit: false
