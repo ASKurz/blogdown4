@@ -119,17 +119,17 @@ enableEmoji = true
     title = "Blog"
     url = "/blog/"
     weight = 2
-  [[menu.header]]
-    name = "Projects"
-    title = "Project Portfolio"
-    url = "/project/"
-    weight = 3
+#  [[menu.header]]
+#    name = "Projects"
+#    title = "Project Portfolio"
+#    url = "/project/"
+#    weight = 3
     
   [[menu.header]]
     name = "Pubs"
     title = "Pubs"
     url = "/pubs/"
-    weight = 8
+    weight = 3
     
 #  [[menu.header]]
 #    name = "Talks"
@@ -146,11 +146,11 @@ enableEmoji = true
     title = "A collection"
     url = "/collection/"
     weight = 5
-  [[menu.header]]
-    name = "Pubications"
-    title = "Pubications"
-    url = "/publication/"
-    weight = 6
+#  [[menu.header]]
+#    name = "Pubications"
+#    title = "Pubications"
+#    url = "/publication/"
+#    weight = 6
 #  [[menu.header]]
 #    name = "Elements"
 #    title = "Element Page"
