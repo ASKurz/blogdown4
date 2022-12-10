@@ -16,10 +16,10 @@ links:
   icon_pack: fas
   name: website
   url: https://bakeoff.netlify.com/
-- icon: github
-  icon_pack: fab
-  name: code
-  url: https://github.com/apreshill/bakeoff
+#- icon: github
+#  icon_pack: fab
+#  name: code
+#  url: https://github.com/apreshill/bakeoff
 location: Sydney, Australia
 show_post_time: false
 subtitle: Testing
