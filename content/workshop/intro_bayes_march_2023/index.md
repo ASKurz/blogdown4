@@ -1,5 +1,7 @@
 ---
-author: Alison Hill
+title: Introduction to Bayesian statistics with brms and the tidyverse
+subtitle: A workshop through Physalia Courses
+author: A. Solomon Kurz 
 categories:
 - workshop
 date: "2021-01-12"
@@ -22,8 +24,6 @@ links:
 #  url: https://github.com/apreshill/bakeoff
 location: Online
 show_post_time: false
-subtitle: Testing
-title: A campfire
 ---
 
 ## Overview
