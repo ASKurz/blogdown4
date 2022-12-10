@@ -14,8 +14,8 @@ layout: single
 links:
 - icon: door-open
   icon_pack: fas
-  name: website
-  url: https://bakeoff.netlify.com/
+  name: registration
+  url: https://www.physalia-courses.org/courses-workshops/course46/
 #- icon: github
 #  icon_pack: fab
 #  name: code
