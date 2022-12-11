@@ -141,10 +141,15 @@ buildFuture = true
 #    url = "/talk/"
 #    weight = 4
   [[menu.header]]
+    name = "Books"
+    title = "Books"
+    url = "/book/"
+    weight = 4  
+  [[menu.header]]
     name = "Workshops"
     title = "Workshops"
     url = "/workshop/"
-    weight = 4
+    weight = 5
 #  [[menu.header]]
 #    name = "A collection"
 #    title = "A collection"
