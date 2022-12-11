@@ -593,14 +593,14 @@ sessionInfo()
 
 ## References
 
-```{r, fig.width = 3.5, fig.height = 3.25}
+```{r, fig.width = 3.5, fig.height = 3.25, eval = F, echo = F}
 tibble(x = seq(from = -6, to = 6, by = .01)) %>% 
   expand(x, nu = c(1, 2.5, 5, 10, Inf)) %>% 
   mutate(density = dt(x = x, df = nu),
          nu      = factor(nu, levels = c("Inf", "10", "5", "2.5", "1"))) %>% 
   
   ggplot(aes(x = x, y = density, group = nu, color = nu)) +
-  geom_line(size = 1) +
+  geom_line(linewidth = 1) +
   scale_color_viridis_d(expression(nu),
                         direction = 1, option = "C", end = .85) +
   scale_y_continuous(NULL, breaks = NULL) +
@@ -608,7 +608,7 @@ tibble(x = seq(from = -6, to = 6, by = .01)) %>%
   xlab(NULL) +
   theme(legend.background = element_rect(fill = "grey95"),
         legend.key = element_rect(fill = "transparent"),
-        legend.position = c(.9, .73),
+        legend.position = c(.88, .73),
         panel.grid = element_blank())
 
 ggsave("featured.jpg", width = 4, height = 3.5, units = "in")

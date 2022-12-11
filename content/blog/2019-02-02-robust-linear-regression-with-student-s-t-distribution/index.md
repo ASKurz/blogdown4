@@ -817,34 +817,6 @@ sessionInfo()
 
 ## References
 
-``` r
-tibble(x = seq(from = -6, to = 6, by = .01)) %>% 
-  expand(x, nu = c(1, 2.5, 5, 10, Inf)) %>% 
-  mutate(density = dt(x = x, df = nu),
-         nu      = factor(nu, levels = c("Inf", "10", "5", "2.5", "1"))) %>% 
-  
-  ggplot(aes(x = x, y = density, group = nu, color = nu)) +
-  geom_line(size = 1) +
-  scale_color_viridis_d(expression(nu),
-                        direction = 1, option = "C", end = .85) +
-  scale_y_continuous(NULL, breaks = NULL) +
-  coord_cartesian(xlim = c(-5, 5)) +
-  xlab(NULL) +
-  theme(legend.background = element_rect(fill = "grey95"),
-        legend.key = element_rect(fill = "transparent"),
-        legend.position = c(.9, .73),
-        panel.grid = element_blank())
-```
-
-    ## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
-    ## ℹ Please use `linewidth` instead.
-
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-32-1.png" width="336" />
-
-``` r
-ggsave("featured.jpg", width = 4, height = 3.5, units = "in")
-```
-
 <div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
 
 <div id="ref-burknerBrmsPackageBayesian2017" class="csl-entry">
