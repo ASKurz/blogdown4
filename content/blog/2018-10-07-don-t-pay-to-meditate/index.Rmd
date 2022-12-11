@@ -2,33 +2,32 @@
 title: Don't pay to meditate
 author: A. Solomon Kurz
 date: '2018-10-07'
-slug: ''
-categories: []
+draft: false
+excerpt: "Stop using fee-based meditation apps! Let me tell you why."
+layout: single
 tags:
-  - app
-  - Insight Timer
-  - MBCT
-  - MBRP
-  - MBSR
-  - meditation
-  - mindfulness
-  - smartphone
-subtitle: ''
-summary: ''
-authors: []
+- app
+- Insight Timer
+- MBCT
+- MBRP
+- MBSR
+- meditation
+- mindfulness
+- smartphone
 lastmod: '2021-04-21T13:23:03-07:00'
-featured: no
-image:
-  caption: ''
-  focal_point: ''
-  preview_only: no
-projects: []
+bibliography: /Users/solomonkurz/Dropbox/blogdown/content/post/my_blog.bib
+biblio-style: apalike
+csl: /Users/solomonkurz/Dropbox/blogdown/content/post/apa.csl  
+link-citations: yes
 ---
 
 The other day, my Twitter feed informed me Penn Jillette just clocked in 1000 consecutive days of meditation using the Headspace app. Now he's considering checking out Sam Harris's new Waking Up meditation app. Sam left a congratulatory comment on Penn's tweet.
 
-```{r echo = FALSE}
+```{r, eval = F}
 blogdown::shortcode('tweet', '1048730683940646914')
+
+# Note: this code no longer works because Sam Harris has since deleted his Twitter account.
+# It was a cute tweet. So it goes... 
 ```
 
 The whole thing was rainbows and kittens. And it reminded me to pass on some advice: **Stop using fee-based meditation apps!**
