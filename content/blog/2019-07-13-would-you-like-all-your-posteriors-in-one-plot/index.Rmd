@@ -2,6 +2,9 @@
 title: Would you like all your posteriors in one plot?
 author: A. Solomon Kurz
 date: '2019-07-13'
+draft: false
+excerpt: "In response to a DM question, here we practice a few different ways you can combine the posterior samples from your Bayesian models into a single plot."
+layout: single
 tags:
 - Bayesian
 - brms
