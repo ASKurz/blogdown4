@@ -156,7 +156,7 @@ draws3 <- as_draws_df(fit3)
 
 Focusing on `fit1`, here's how we'd plot the results for the intercept $\beta_0$.
 
-```{r, fig.width = 5, fig.height = 2}
+```{r, fig.width = 5, fig.height = 2, warning = F}
 # this part is unnecessary; it just adjusts some theme defaults to my liking
 theme_set(theme_gray() +
             theme(axis.text.y  = element_text(hjust = 0),
@@ -420,7 +420,7 @@ To learn more about using the **tidyverse** for iterating and saving the results
 sessionInfo()
 ```
 
-```{r, warning = F}
+```{r, echo = F, eval = F}
 bind_cols(
   draws4 %>% select(b_x1),
   draws5 %>% select(b_x2),

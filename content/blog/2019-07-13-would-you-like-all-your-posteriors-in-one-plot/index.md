@@ -136,9 +136,6 @@ draws1 %>%
   scale_y_continuous(NULL, breaks = NULL)
 ```
 
-    ## Warning: Using the `size` aesthietic with geom_segment was deprecated in ggplot2 3.4.0.
-    ## ℹ Please use the `linewidth` aesthetic instead.
-
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-7-1.png" width="480" />
 
 *But how might we get the posterior draws from all three fits into one plot?* The answer is by somehow combining the posterior draws from each into one data frame. There are many ways to do this. Perhaps the simplest is with the `bind_rows()` function.
@@ -532,22 +529,3 @@ sessionInfo()
     ## [125] parallel_4.2.0       hms_1.1.1            grid_4.2.0           coda_0.19-4         
     ## [129] minqa_1.2.5          rmarkdown_2.16       googledrive_2.0.0    shiny_1.7.2         
     ## [133] lubridate_1.8.0      base64enc_0.1-3      dygraphs_1.1.1.6
-
-``` r
-bind_cols(
-  draws4 %>% select(b_x1),
-  draws5 %>% select(b_x2),
-  draws6 %>% select(b_x3)
-  ) %>% 
-  gather() %>% 
-  mutate(predictor = str_remove(key, "b_")) %>% 
-  ggplot(aes(x = value, y = predictor)) +
-  stat_halfeye(.width = .95, size = 1/2) +
-  xlab("posterior")
-```
-
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-24-1.png" width="672" />
-
-``` r
-ggsave("featured.jpg", width = 4, height = 3.5, units = "in")
-```
