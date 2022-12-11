@@ -335,7 +335,7 @@ sd %>%
   ggplot(aes(x = response, y = density)) +
   # here we make our density lines
   geom_line(aes(group = interaction(.draw, g)),
-            alpha = 1/2, size = 1/3, color = "steelblue") +
+            alpha = 1/2, linewidth = 1/3, color = "steelblue") +
   # use the original data for the jittered points
   geom_jitter(data = abc,
               height = .05, shape = 1, alpha = 2/3) +
@@ -343,9 +343,6 @@ sd %>%
                      breaks = 0:4,
                      labels = letters[1:5])
 ```
-
-    ## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
-    ## ℹ Please use `linewidth` instead.
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-16-1.png" width="384" />
 
@@ -367,7 +364,7 @@ sd %>%
   
   ggplot(aes(x = response, y = density)) +
   geom_line(aes(group = interaction(.draw, g)),
-            alpha = 1/2, size = 1/3, color = "steelblue") +
+            alpha = 1/2, linewidth = 1/3, color = "steelblue") +
   geom_jitter(data = abc,
               height = .05, shape = 1, alpha = 2/3) +
   scale_y_continuous("condition",
@@ -399,7 +396,7 @@ sd %>%
          response < ul) %>% 
   ggplot(aes(x = response, y = density)) +
   geom_line(aes(group = interaction(.draw, g)),
-            alpha = 1/2, size = 1/3, color = "steelblue") +
+            alpha = 1/2, linewidth = 1/3, color = "steelblue") +
   geom_jitter(data = abc,
               height = .05, shape = 1, alpha = 2/3) +
   scale_y_continuous("condition",
@@ -418,7 +415,7 @@ sd %>%
   
   ggplot(aes(x = response, y = density)) +
   geom_line(aes(group = interaction(.draw, g)),
-            alpha = 1/2, size = 1/3, color = "steelblue") +
+            alpha = 1/2, linewidth = 1/3, color = "steelblue") +
   geom_jitter(data = abc,
               height = .05, shape = 1, alpha = 2/3) +
   scale_y_reverse("condition",
@@ -457,7 +454,7 @@ sd %>%
   ggplot(aes(x = density, y = response)) +
   geom_path(aes(group = interaction(.draw, g), 
                 color = b_Intercept + r_condition),
-            alpha = 1/2, size = 1/3, show.legend = F) +
+            alpha = 1/2, linewidth = 1/3, show.legend = F) +
   geom_jitter(data = abc,
               width = .05, shape = 1, alpha = 2/3) +
   scale_x_continuous("condition",
