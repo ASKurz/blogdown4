@@ -8,10 +8,12 @@ At present, all of my books share a similar format and goal. I am a fan of appli
 
 In my experience, Bayesian methods are easiest to use within the **R** computing environment by way of Paul Bürkner's [**brms** package](https://github.com/paul-buerkner/brms). At present, very few textbooks showcase how to use **brms** for applied Bayesian data analysis. My books are an effort to fill that content gap and to make the powerful techniques afforded by the Bayesian paradigm even more accessible to applied researchers. In addition, I make heavy use of the collection of **R** packages known as the [**tidyverse**](https://www.tidyverse.org) when manipulating and visualizing my data. The following books highlight these paradigms:
 
-* *Applied Longitudinal Data Analysis in brms and the tidyverse*, version 0.0.2, is a translation of the examples and figures from Singer and Willett's classic *Applied longitudinal data analysis: Modeling change and event occurrence*. 
-  - You can find my ebook at https://bookdown.org/content/4253/
-  - You can find information about the original book by Singer and Willett [here](https://www.oxfordscholarship.com/view/10.1093/acprof:oso/9780195152968.001.0001/acprof-9780195152968).
-  - :warning: This project is in the very early stages.
+## *Applied Longitudinal Data Analysis in brms and the tidyverse*, version 0.0.2
+
+This is a translation of the examples and figures from Singer and Willett's classic *Applied longitudinal data analysis: Modeling change and event occurrence*. 
+* You can find my ebook at https://bookdown.org/content/4253/
+* You can find information about the original book by Singer and Willett [here](https://www.oxfordscholarship.com/view/10.1093/acprof:oso/9780195152968.001.0001/acprof-9780195152968).
+* :warning: This project is in the very early stages.
 
 * *Doing Bayesian data analysis in brms and the tidyverse*, version 1.0.0, is a translation of the code from the second edition of John K. Kruschke's *Doing Bayesian Data Analysis*.
   - You can find my ebook at https://bookdown.org/content/3686
