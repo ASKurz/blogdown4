@@ -17,10 +17,10 @@ tags:
 - tidyverse
 - tutorial
 lastmod: '2021-04-21T13:20:06-07:00'
-image:
-  caption: ''
-  focal_point: ''
-  preview_only: no
+bibliography: /Users/solomonkurz/Dropbox/blogdown/content/post/my_blog.bib
+biblio-style: apalike
+csl: /Users/solomonkurz/Dropbox/blogdown/content/post/apa.csl  
+link-citations: yes
 ---
 
 ## tl;dr
