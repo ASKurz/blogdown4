@@ -4,6 +4,7 @@ author: A. Solomon Kurz
 date: '2018-10-04'
 draft: false
 excerpt: "The purpose of this post is to give readers a sense of how I used bookdown to make my first ebooks. I propose there are three fundamental skill sets you need basic fluency in before playing with bookdown: (a) R and R Studio, (b) scripts and R Markdown files, and (c) Git and GitHub."
+layout: single
 tags:
 - Bayesian
 - bookdown

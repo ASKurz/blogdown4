@@ -4,6 +4,7 @@ author: A. Solomon Kurz
 date: '2018-10-04'
 draft: false
 excerpt: "The purpose of this post is to give readers a sense of how I used bookdown to make my first ebooks. I propose there are three fundamental skill sets you need basic fluency in before playing with bookdown: (a) R and R Studio, (b) scripts and R Markdown files, and (c) Git and GitHub."
+layout: single
 tags:
 - Bayesian
 - bookdown
@@ -91,8 +92,8 @@ library(tidyverse)
 
 tibble(x = 0, y = 0, label = 3) %>% 
   ggplot(aes(x = x, y = y, label = label)) +
-  geom_point(size = 40, color = "grey75") +
-  geom_text(size = 30) +
+  geom_point(size = 60, color = "grey85") +
+  geom_text(size = 50) +
   scale_x_continuous(NULL, breaks = NULL) +
   scale_y_continuous(NULL, breaks = NULL) +
   coord_equal() +
