@@ -256,9 +256,9 @@ Your millage may vary, but be warned: The changes in the next two sections ate u
 
 ### Step 16: `content/publication/`.
 
-I'm not sure when it was added, but the publications widget was new, to me. You can get some pointers for this section in Gina Reynolds blog post, [*Creating an 'Academic Themed' website with blogdown and Hugo*](https://evamaerey.github.io/what_how_guides/academic_website_w_blogdown#step-14-add-your-publications-in-the-contentpublication-folder), which is itself a supplement to Dan Quintana's tweetorial:
+I'm not sure when it was added, but the publications widget was new, to me. You can get some pointers for this section in Gina Reynolds blog post, [*Creating an 'Academic Themed' website with blogdown and Hugo*](https://evamaerey.github.io/what_how_guides/academic_website_w_blogdown#step-14-add-your-publications-in-the-contentpublication-folder), which is itself a supplement to Dan Quintana's nice [tweetorial](https://twitter.com/dsquintana/status/1139846569623281664).
 
-```{r, echo = F}
+```{r, echo = F, eval = F}
 blogdown::shortcode('tweet', 
                     user = "dsquintana",
                     id = "1139846569623281664")
