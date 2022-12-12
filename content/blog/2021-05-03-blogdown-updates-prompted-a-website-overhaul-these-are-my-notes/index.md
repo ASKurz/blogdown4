@@ -159,9 +159,7 @@ I like to use a lot of `\(\LaTeX\)` formulas in my blog posts. If you would like
 
 #### Step 10.b. Include your CV.
 
-If you look at the bottom of the `content/authors/admin/_index.md` file, you’ll see the code for a nice widget which will make it easy for people to download a copy of your résumé or CV. I changed that code to read:
-
-The next step is to save an actual copy of your CV in the `static/media` folder. While you’re in there, you might delete the `demo_resume.pdf` and `boards.jpg` files.
+If you look at the bottom of the `content/authors/admin/_index.md` file, you’ll see the code for a nice widget which will make it easy for people to download a copy of your résumé or CV. I changed that code to link to the file for my CV: `media/A Solomon Kurz CV.pdf`. Code like this presumes you have saved an actual copy of your CV in the `static/media` folder. While you’re in there, you might delete the `demo_resume.pdf` and `boards.jpg` files.
 
 #### Step 10.c. Delete the mysterious other guy.
 
