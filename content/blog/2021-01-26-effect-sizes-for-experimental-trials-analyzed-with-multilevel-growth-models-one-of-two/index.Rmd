@@ -279,4 +279,3 @@ p1 + p2 + plot_layout(widths = c(5, 4))
 
 ggsave("featured.jpg", width = 7.5, height = 3.75, units = "in")
 ```
-
