@@ -609,7 +609,7 @@ Here’s our custom forest plot.
 draws %>% 
   ggplot(aes(x = Estimate, xmin = Q2.5, xmax = Q97.5, y = rank)) +
   geom_interval(aes(color = label == "POPULATION AVERAGE"),
-                linewidth = 1/2) +
+                size = 1/2) +
   geom_point(aes(size = 1 - Est.Error, color = label == "POPULATION AVERAGE"),
              shape = 15) +
   scale_color_viridis_d(option = "C", begin = .33, end = .67) +
@@ -625,12 +625,6 @@ draws %>%
         panel.background = element_rect(fill = "grey8"),
         panel.border = element_rect(color = "transparent"))
 ```
-
-    ## Warning in geom_interval(aes(color = label == "POPULATION AVERAGE"), linewidth = 1/2): Ignoring
-    ## unknown parameters: `linewidth`
-
-    ## Warning: Using the `size` aesthietic with geom_segment was deprecated in ggplot2 3.4.0.
-    ## ℹ Please use the `linewidth` aesthetic instead.
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-19-1.png" width="768" style="display: block; margin: auto;" />
 
