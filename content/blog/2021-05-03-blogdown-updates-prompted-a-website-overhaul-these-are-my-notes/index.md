@@ -209,6 +209,77 @@ Though one doesn’t need to do this, I cleaned out the `content/` folder, a bit
 -   `content/project/`, and
 -   `content/slides/` folders.
 
+### Step 14. Personalize `content/courses`.
+
+I streamlined this section by deleting the `content/courses/example` subfolder and listing my prior courses in Markdown-based paragraph form within the `content/courses/_index.md` file.
+
+### Step 15: `config/_default/menus.yaml`.
+
+This will break up the current workflow, a bit. But at this point it made sense to me to adjust the menu settings for the navigation bar link, which appears at the top of the website. Just to keep them for reference, I commented out the default settings. My custom settings were as follows:
+
+``` r
+main:
+  - name: Home
+    url: '#about'
+    weight: 1
+  - name: Blog posts
+    url: post/
+    weight: 2
+  - name: Books
+    url: bookdown/
+    weight: 3
+  - name: Publications
+    url: publication/
+    weight: 4
+  - name: Courses
+    url: courses/
+    weight: 5
+  - name: Conflicts of interest
+    url: /conflicts
+    weight: 6
+  - name: Support
+    url: support/
+    weight: 7
+```
+
+If you follow this workflow, I recommend committing these changes, pushing them to GitHub, and inspecting the current website appearance after deployed by Netlify. We’re not done yet, but this will give you a sense of where the website is headed.
+
+Your millage may vary, but be warned: The changes in the next two sections ate up several hours, each.
+
+### Step 16: `content/publication/`.
+
+I’m not sure when it was added, but the publications widget was new, to me. You can get some pointers for this section in Gina Reynolds blog post, [*Creating an ‘Academic Themed’ website with blogdown and Hugo*](https://evamaerey.github.io/what_how_guides/academic_website_w_blogdown#step-14-add-your-publications-in-the-contentpublication-folder), which is itself a supplement to Dan Quintana’s nice [tweetorial](https://twitter.com/dsquintana/status/1139846569623281664).
+
+{{% tweet user="dsquintana" id="1139846569623281664" %}}
+
+If it’s new to you, too, I **strongly recommend** you follow Quintana’s [advice](https://twitter.com/dsquintana/status/1139846908065669120) and begin by opening the `index.md` file in one of the example subfolders (e.g., `content/publication/journal-article/`) and slowly switch out the default information to match up with one of your publications. I was overly ambitious and tried to learn by building a personal subfolder by scratch. It’s easy to lose track of your mistakes, this way, and I recommend you save yourself the unnecessary aggravation by following Quintana’s advice, instead.
+
+Although the publications widget allows one to include a featured picture for each publication, I wasn’t interested. Thus, I deleted the `featured.jpg` files from the subfolders.
+
+For my purposes, most of the work, in this section, was concentrated in the YAML metadata within the `index.md` files. Here are a few pointers:
+
+-   Make sure to use the `publication_types` parameter. For journal articles, you set `- 2`. To learn more, go to <https://wowchemy.com/docs/content/publications/#command-line>.
+-   Default to wrapping your titles and abstracts within `''` or `""` marks. Sometimes, you’ll get away without them. You’ll run into trouble if, say, you leave them out and your title includes a `:` mark.
+-   Within the `authors` section, list yourself as `admin`. It’ll be okay if you don’t, but you’ll lose out on functionality. Try it both ways to see what I mean.
+-   It’s fine to list dates in a simple `'2020-12-01'` format.
+-   For the `publication` section, I preferred to simply list the name of the relevant journal. If desired, you can use Markdown syntax to italicize and so on.
+-   Treat the `tags` like keywords.
+-   If your article has a freely-available PDF that is not locked behind a paywall, you might include that link in the `url_pdf` section. If your article is not freely available, but you’d like it to be, you can still host it on your website and include a link in the `url_pdf` section. What I did was first make a `pdf` subfolder within the static folder (i.e., `static/pdf/`). Second, I saved PDFs of my paywalled papers in that `static/pdf/` folder, with each file named by author, year, and title (your naming system might vary\[^5\]). Third, I linked to the relevant file within the relevant project subfolder. For example, one of my first papers was published with Sarah Bowen in 2012. That paper is listed in my `content/publication/Bowen & Kurz (2012a)/` subfolder. Here’s how I linked to the PDF:
+
+``` r
+url_pdf: "pdf/Bowen & Kurz (2012) Between-session practice and therapeutic alliance as predictors of mindfulness after mindfulness-based relapse prevention.pdf"
+```
+
+-   If you’d like to link to a site that is not part of those obviously included in the examples (e.g., the [Open Science Framework](https://osf.io/)), you can insert a custom-named link, like this:
+
+``` r
+links:
+  - name: OSF
+    url: 'https://osf.io/fdywh/'
+```
+
+-   It can be helpful to see how more-experienced users set up their `project` folders. You can find Hill’s [here](https://github.com/rbind/apreshill/tree/master/content/publication) and Quintana’s [here](https://github.com/dsquintana/website/tree/master/content/publication).
+
 <div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
 
 <div id="ref-bryanHappyGitGitHub2020" class="csl-entry">
