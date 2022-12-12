@@ -51,6 +51,35 @@ Make a fresh RStudio project\[^2\] to go along with your fresh GitHub repo. With
 
 If you haven’t already, install the current version of **blogdown** by executing `install.packages("blogdown")`. Restart **R**, if necessary. Now within a fresh session within your RStudio project, execute `blogdown::new_site(theme = "wowchemy/starter-academic")`\[^3\]. Over the next minute or two, you’ll see a handful of new files pop up in your project folder. In your console, you’ll probably notice the prompt: “Want to serve and preview the site now? (y/n)”. I recommend executing `y`, which will return a preview of your default **blogdown** website in the RStudio Viewer panel.
 
+### Step 4. `.gitignore`.
+
+I don’t know that you have to do this right now, but a good early step is to make a `.gitignore` file. Following Hill ([here](https://alison.rbind.io/post/new-year-new-blogdown/#using-github)), you can do this by executing `file.edit(".gitignore")`. Then go ahead and enter this content to the file:
+
+``` r
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+Thumbs.db 
+/public/
+/resources/
+```
+
+Once you save the changes, you might execute `blogdown::check_gitignore()` to confirm you’re okay.
+
+If you haven’t done so, yet, this would be a good time to commit your changes and push them to GitHub. Again, if this is new to you, let Bryan et al. ([2020](#ref-bryanHappyGitGitHub2020)) lead you.
+
+## Netlify
+
+### Step 5. Sign up and deploy.
+
+Hill recommended you both build and host your **blogdown** website on Neflify (see [here](https://alison.rbind.io/post/new-year-new-blogdown/#step-1-create-repo)). I’m not going to argue. Go to <https://www.netlify.com/> and either log in or sign up using your GitHub account. Even if you already have a Netlify account, I recommend making a new Netlify site with `New site from Git > Continuous Deployment: GitHub`. You’ll then need to select your fresh GitHub repo, from above, to connect it to Netlify. This may require you to follow the prompts to actually navigate to GitHub, enable the connection, there, and then follow back to Netlify. Once you’re back in Netlify, leave settings at their defaults and select `Deploy Site`. You should be directed to a page with a header called *Production deploys* somewhere in the middle of the screen. After a minute of two, Netlify will finish deploying your site.
+
+### Step 6. Customize your Netlify subdomain.
+
+When you create your new site, Netlify will have automatically generated a subdomain name following the form `random-word-12345`. You should be able to see this at the top of your screen. This subdomain name will be part of your web address. You’re at liberty to keep the default name, if you want. But you can customize your subdomain name by navigating to `Site settings > General > Site details`. Then click the gray button named `Change site name`. In the field, I renamed my subdomain to `solomonkurz`. As a result, my website is deployed at <https://solomonkurz.netlify.app/>. Once you save this change, your website should be available at your customized address almost instantly.
+
 <div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
 
 <div id="ref-bryanHappyGitGitHub2020" class="csl-entry">
