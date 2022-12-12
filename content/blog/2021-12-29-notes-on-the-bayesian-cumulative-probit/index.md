@@ -1370,7 +1370,26 @@ Well okay, maybe I do lose something by letting the thresholds vary across quest
 
 If the latent means can vary randomly, the latent dispersion parameters can vary randomly, too. Now `\(\log(\alpha_{ij})\)` will vary across `\(i\)` persons and `\(j\)` questions with the Bayesian ordinal IRT model
 
-`\begin{align*} \small{p(\text{rating} = k | \{ \tau_{kj} \}, \mu_{ij}, {\color{blue}{\alpha_{ij}}})} & = \small{\Phi({\color{blue}{\alpha_{ij}}} [\tau_{kj} - \mu_{ij}]) - \Phi( {\color{blue}{\alpha_{ij}}} [\tau_{k - 1,j} - \mu_{ij}])} \\ \mu_{ij} & = 0 + u_i + v_j \\  {\color{blue}{\log(\alpha_{ij})}} & = {\color{blue}{0 + w_i + x_j}} \\ u_i & \sim \mathcal N(0, \sigma_u) \\ v_j & \sim \mathcal N(0, \sigma_v) \\ {\color{blue}{w_i}} & \sim {\color{blue}{\mathcal N(0, \sigma_w)}} \\ {\color{blue}{x_j}} & \sim {\color{blue}{\mathcal N(0, \sigma_x)}} \\ \tau_{1j} & \sim \mathcal N(-0.97, 1) \\ \tau_{2j} & \sim \mathcal N(-0.43, 1) \\ \tau_{3j} & \sim \mathcal N(0, 1) \\ \tau_{4j} & \sim \mathcal N(0.43, 1) \\ \tau_{5j} & \sim \mathcal N(0.97, 1) \\ \sigma_u & \sim \operatorname{Exponential}(1) \\ \sigma_v & \sim \operatorname{Exponential}(1) \\ {\color{blue}{\sigma_w}} & \sim {\color{blue}{\operatorname{Exponential}(1)}} \\ {\color{blue}{\sigma_x}} & \sim {\color{blue}{\operatorname{Exponential}(1)}} . \end{align*}`
+$$
+`\begin{align*}
+\small{p(\text{rating} = k | \{ \tau_{kj} \}, \mu_{ij}, {\color{blue}{\alpha_{ij}}})} & = \small{\Phi({\color{blue}{\alpha_{ij}}} [\tau_{kj} - \mu_{ij}]) - \Phi( {\color{blue}{\alpha_{ij}}} [\tau_{k - 1,j} - \mu_{ij}])} \\
+\mu_{ij} & = 0 + u_i + v_j \\ 
+{\color{blue}{\log(\alpha_{ij})}} & = {\color{blue}{0 + w_i + x_j}} \\
+u_i & \sim \mathcal N(0, \sigma_u) \\
+v_j & \sim \mathcal N(0, \sigma_v) \\
+{\color{blue}{w_i}} & \sim {\color{blue}{\mathcal N(0, \sigma_w)}} \\
+{\color{blue}{x_j}} & \sim {\color{blue}{\mathcal N(0, \sigma_x)}} \\
+\tau_{1j} & \sim \mathcal N(-0.97, 1) \\
+\tau_{2j} & \sim \mathcal N(-0.43, 1) \\
+\tau_{3j} & \sim \mathcal N(0, 1) \\
+\tau_{4j} & \sim \mathcal N(0.43, 1) \\
+\tau_{5j} & \sim \mathcal N(0.97, 1) \\
+\sigma_u & \sim \operatorname{Exponential}(1) \\
+\sigma_v & \sim \operatorname{Exponential}(1) \\
+{\color{blue}{\sigma_w}} & \sim {\color{blue}{\operatorname{Exponential}(1)}} \\
+{\color{blue}{\sigma_x}} & \sim {\color{blue}{\operatorname{Exponential}(1)}} .
+\end{align*}`
+$$
 
 Though the `\(\operatorname{Exponential}(1)\)` prior might be a good place to start with our new `\(\sigma_w\)` and `\(\sigma_x\)`, let’s ponder this a bit. Recall these are for the distribution of logged discrimination parameters. Since I’m no statistician or psychometrician, I’m not even sure what that means, which makes it hard to intuit whether the `\(\operatorname{Exponential}(1)\)` prior makes sense for my data. A plot might help. Here we’ll simulate `\(100{,}000\)` draws from the `\(\operatorname{Exponential}(1)\)` prior, use those draws to simulate `\(w_i\)` values from `\(\mathcal N(0, \sigma_w)\)`, and then plot that distribution in the `\(w_i\)`, `\(\exp(w_i)\)` and `\(1/\exp(w_i)\)` metrics.
 
