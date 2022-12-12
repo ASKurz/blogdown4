@@ -163,6 +163,52 @@ If you look at the bottom of the `content/authors/admin/_index.md` file, you’l
 
 The next step is to save an actual copy of your CV in the `static/media` folder. While you’re in there, you might delete the `demo_resume.pdf` and `boards.jpg` files.
 
+#### Step 10.c. Delete the mysterious other guy.
+
+There was a second subfolder within the `content/authors` folder, which was named with what looked like Chinese characters. I deleted that subfolder.
+
+### Step 11. `content/home`.
+
+The `.md` files in the `content/home` folder control the contents of the website home page. Each `.md` file is for a widget. To turn them off, insert the following somewhere in the file (I chose to put these in the top, to make them more visible):
+
+``` r
+# Activate this widget? true/false
+active: false
+```
+
+The **blogdown** default settings are way to busy for my taste. To de-clutter my home page, I set `active: false` to the following files:
+
+-   `accomplishments.md`,
+-   `demo.md`,
+-   `experience.md`,
+-   `featured.md`,
+-   `hero.md`,
+-   `posts.md`,
+-   `projects.md`,
+-   `publications.md`,
+-   `skills.md`,
+-   `tags.md`,
+-   `talks.md`, and
+-   `/gallery/index.md`.
+
+### Step 12. Add custom `content/` folders.
+
+I wanted to add a few `content/` sections that were not a part of the **blogdown** defaults. The new additions were:
+
+-   `content/bookdown/`, which included a listing of my ebooks;
+-   `content/conflicts/`, which included a brief discussion of my conflicts of interest; and
+-   `content/support/`, which listed a few ways others might support my work.
+
+Since these sections were all quite simple, each subfolder only included an `_index.md` file. Each of those files contained a brief YAML\[^4\] metadata header and some [Markdown](https://rmarkdown.rstudio.com) prose.
+
+### Step 13. Delete unwanted `content/` folders.
+
+Though one doesn’t need to do this, I cleaned out the `content/` folder, a bit, by deleting the
+
+-   `content/event/`,
+-   `content/project/`, and
+-   `content/slides/` folders.
+
 <div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
 
 <div id="ref-bryanHappyGitGitHub2020" class="csl-entry">
