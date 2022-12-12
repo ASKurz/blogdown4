@@ -70,10 +70,12 @@ theme_set(
 
 The model follows the generic equation
 
+$$
 \begin{align*}
 \phi_{S^* | S} = \operatorname{logistic}(\lambda_{S^* | S}) \\
 \lambda_{S^* | S} = \beta_{0, S^* | S} + \beta_{1, {S^* | S}} x,
 \end{align*}
+$$
 
 where the conditional response probability (i.e., the goal of the analysis) is $\phi_{S^* | S}$. $S^*$ and $S$ denote the subset of outcomes and larger set of outcomes, respectively, and $\lambda_{S^* | S}$ is the propensity based on some linear model. The overall point is these "regression coefficients refer to the conditional probability of outcomes for the designated subsets, not necessarily to a single outcome among the full set of outcomes" (p. 655).
 
