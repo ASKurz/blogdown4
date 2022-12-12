@@ -161,8 +161,6 @@ I like to use a lot of `\(\LaTeX\)` formulas in my blog posts. If you would like
 
 If you look at the bottom of the `content/authors/admin/_index.md` file, you’ll see the code for a nice widget which will make it easy for people to download a copy of your résumé or CV. I changed that code to read:
 
-`{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/A Solomon Kurz CV.pdf" "newtab" >}}CV{{< /staticref >}}.`
-
 The next step is to save an actual copy of your CV in the `static/media` folder. While you’re in there, you might delete the `demo_resume.pdf` and `boards.jpg` files.
 
 <div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
