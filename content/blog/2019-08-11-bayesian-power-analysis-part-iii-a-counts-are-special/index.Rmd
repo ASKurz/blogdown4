@@ -237,7 +237,7 @@ sim1 %>%
   
   ggplot(aes(x = width)) +
   geom_histogram(binwidth = 0.01) +
-  geom_rug(size = 1/6)
+  geom_rug(linewidth = 1/6)
 ```
 
 What if we wanted a mean width of 0.25 on the log scale? We might try the simulation with $n = 150$.
@@ -362,7 +362,7 @@ sim3 %>%
   
   ggplot(aes(x = width)) +
   geom_histogram(binwidth = 0.05) +
-  geom_rug(size = 1/6)
+  geom_rug(linewidth = 1/6)
 ```
 
 What if we wanted a mean 95% interval width of 1? Let's run the simulation again, this time with $n = 100$.
@@ -381,7 +381,7 @@ Here's the new width distribution.
 sim4 %>% 
   ggplot(aes(x = width)) +
   geom_histogram(binwidth = 0.05) +
-  geom_rug(size = 1/6)
+  geom_rug(linewidth = 1/6)
 ```
 
 And the mean width is:

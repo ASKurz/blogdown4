@@ -257,11 +257,8 @@ sim1 %>%
   
   ggplot(aes(x = width)) +
   geom_histogram(binwidth = 0.01) +
-  geom_rug(size = 1/6)
+  geom_rug(linewidth = 1/6)
 ```
-
-    ## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
-    ## ℹ Please use `linewidth` instead.
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-12-1.png" width="384" />
 
@@ -388,7 +385,7 @@ sim3 %>%
   
   ggplot(aes(x = width)) +
   geom_histogram(binwidth = 0.05) +
-  geom_rug(size = 1/6)
+  geom_rug(linewidth = 1/6)
 ```
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-18-1.png" width="384" />
@@ -409,7 +406,7 @@ Here’s the new width distribution.
 sim4 %>% 
   ggplot(aes(x = width)) +
   geom_histogram(binwidth = 0.05) +
-  geom_rug(size = 1/6)
+  geom_rug(linewidth = 1/6)
 ```
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-19-1.png" width="384" />
