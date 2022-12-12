@@ -455,7 +455,7 @@ Here's our custom forest plot.
 draws %>% 
   ggplot(aes(x = Estimate, xmin = Q2.5, xmax = Q97.5, y = rank)) +
   geom_interval(aes(color = label == "POPULATION AVERAGE"),
-                size = 1/2) +
+                linewidth = 1/2) +
   geom_point(aes(size = 1 - Est.Error, color = label == "POPULATION AVERAGE"),
              shape = 15) +
   scale_color_viridis_d(option = "C", begin = .33, end = .67) +
