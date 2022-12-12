@@ -107,3 +107,33 @@ Next, check for a `netlify.toml` file in your root directory. You can also open 
 
 If this seems scary, Hill discussed it in greater detail [here](https://alison.rbind.io/post/new-year-new-blogdown/#step-5-publish-site).
 
+### Step 9. `.Rprofile`.
+
+Still following Hill ([here](https://alison.rbind.io/post/new-year-new-blogdown/#step-4-create-content)), make an `.Rprofile` file by executing `blogdown::config_Rprofile()`. Then customize some of the settings within `options()`, as desired. Mine now read:
+
+```{r, eval = F}
+options(
+  # to automatically serve the site on RStudio startup, set this option to TRUE
+  blogdown.serve_site.startup = FALSE,
+  # to disable knitting Rmd files on save, set this option to FALSE
+  blogdown.knit.on_save = TRUE,
+  # build .Rmd to .html (via Pandoc); to build to Markdown, set this option to 'markdown'
+  blogdown.method = 'html',
+  # fix Hugo version
+  blogdown.hugo.version = "0.82.0",
+  # These changes are based on Alison Hill's posts:
+  # https://alison.rbind.io/post/2019-02-21-hugo-page-bundles/#project-specific-rprofile
+  # and 
+  # https://alison.rbind.io/post/new-year-new-blogdown/#step-4-create-content
+  blogdown.author = "A. Solomon Kurz",
+  blogdown.ext = ".Rmd",
+  blogdown.subdir = "post",
+  blogdown.yaml.empty = TRUE,
+  blogdown.new_bundle = TRUE
+)
+```
+
+In her post, Hill stressed it's important to restart your RStudio session after you save any changes to `.Rprofile`. If you haven't done so, in a while, this is probably a good time to commit and push your files to GitHub.
+
+## Content
+
