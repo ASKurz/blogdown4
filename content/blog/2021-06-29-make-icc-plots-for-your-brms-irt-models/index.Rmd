@@ -321,9 +321,9 @@ draws %>%
   glimpse()
 ```
 
-Now there are 16 `r_item__` columns, half of which correspond to the $\xi_i$ deviations and the other half of which correspond to the $\alpha_i$ deviations. In addition, we also have the `b_logalpha_Intercept` columns to content with. So this time, we'll follow up our `pivot_longer()` code with subsequent `mutate()` and `select()` steps, and complete the task with `pivot_wider()`.
+Now there are 16 `r_item__` columns, half of which correspond to the $\xi_i$ deviations and the other half of which correspond to the $\alpha_i$ deviations. In addition, we also have the `b_logalpha_Intercept` columns to contend with. So this time, we'll follow up our `pivot_longer()` code with subsequent `mutate()` and `select()` steps, and complete the task with `pivot_wider()`.
 
-```{r}
+```{r, warning = F}
 draws <- draws %>% 
   select(.draw, b_eta_Intercept, b_logalpha_Intercept, starts_with("r_item")) %>% 
   pivot_longer(starts_with("r_item")) %>% 

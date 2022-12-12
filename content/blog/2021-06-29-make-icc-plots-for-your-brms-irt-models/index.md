@@ -437,7 +437,7 @@ draws %>%
     ## $ `r_item__logalpha[16,Intercept]` <dbl> 0.092113896, 0.104240677, 0.092359783, 0.097844755, 0.494488271, 0.…
     ## $ `r_item__logalpha[18,Intercept]` <dbl> 0.09498269, -0.15278053, 0.01792382, -0.01208098, -0.31325790, -0.0…
 
-Now there are 16 `r_item__` columns, half of which correspond to the `\(\xi_i\)` deviations and the other half of which correspond to the `\(\alpha_i\)` deviations. In addition, we also have the `b_logalpha_Intercept` columns to content with. So this time, we’ll follow up our `pivot_longer()` code with subsequent `mutate()` and `select()` steps, and complete the task with `pivot_wider()`.
+Now there are 16 `r_item__` columns, half of which correspond to the `\(\xi_i\)` deviations and the other half of which correspond to the `\(\alpha_i\)` deviations. In addition, we also have the `b_logalpha_Intercept` columns to contend with. So this time, we’ll follow up our `pivot_longer()` code with subsequent `mutate()` and `select()` steps, and complete the task with `pivot_wider()`.
 
 ``` r
 draws <- draws %>% 
@@ -447,11 +447,7 @@ draws <- draws %>%
          parameter = ifelse(str_detect(name, "eta"), "xi", "logalpha")) %>% 
   select(-name) %>% 
   pivot_wider(names_from = parameter, values_from = value)
-```
 
-    ## Warning: Dropping 'draws_df' class as required metadata was removed.
-
-``` r
 # what does this look like, now?
 head(draws)
 ```
