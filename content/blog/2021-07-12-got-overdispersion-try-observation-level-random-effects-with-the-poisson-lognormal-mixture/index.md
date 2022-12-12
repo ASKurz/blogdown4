@@ -21,6 +21,10 @@ csl: /Users/solomonkurz/Dropbox/blogdown/content/post/apa.csl
 link-citations: yes
 ---
 
+## Version 1.1.0
+
+Edited on December 12, 2022, to use the new `as_draws_df()` workflow.
+
 ## What?
 
 One of [Tristan Mahr](https://twitter.com/tjmahr)’s recent Twitter threads almost broke my brain.
@@ -413,7 +417,7 @@ n_draw <- 100
 set.seed(1)
 
 p2 <-
-  posterior_samples(fit3) %>% 
+  as_draws_df(fit3) %>% 
   slice_sample(n = n_draw) %>% 
   transmute(iter  = 1:n(),
             mu    = b_Intercept,
@@ -423,7 +427,7 @@ p2 <-
   mutate(d = dlnorm(lambda, meanlog = mu, sdlog = sigma)) %>% 
   
   ggplot(aes(x = lambda, y = d, group = iter)) +
-  geom_line(size = 1/6, alpha = 1/2) +
+  geom_line(linewidth = 1/6, alpha = 1/2) +
   scale_x_continuous(expression(lambda), breaks = 0:6 * 2, 
                      expand = expansion(mult = c(0, 0.05))) +
   scale_y_continuous("density", breaks = NULL, 
@@ -434,11 +438,7 @@ p2 <-
        subtitle = "The parameters are summarized by 100 posterior draws.")
 ```
 
-    ## Warning: Method 'posterior_samples' is deprecated. Please see ?as_draws for
-    ## recommended alternatives.
-
-    ## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
-    ## ℹ Please use `linewidth` instead.
+    ## Warning: Dropping 'draws_df' class as required metadata was removed.
 
 ``` r
 p2
@@ -481,7 +481,7 @@ p4 <-
   mutate(rank = 1:n()) %>% 
   
   ggplot(aes(x = Estimate, xmin = Q2.5, xmax = Q97.5, y = rank)) +
-  geom_pointrange(fatten = 1, size = 1/2) +
+  geom_pointrange(fatten = 1, linewidth = 1/2) +
   scale_x_continuous(expression(lambda[italic(i)]), breaks = 0:6 * 2, 
                      expand = expansion(mult = c(0, 0.05))) +
   scale_y_continuous(breaks = NULL, expand = c(0.02, 0.02)) +
