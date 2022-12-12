@@ -478,7 +478,7 @@ bind_rows(
   mutate(type = str_c(model, ", ", method),
          rho = str_c("rho==", rho)) %>%
   
-  ggplot(aes(x = estimate, y = type, slab_color = stat(x), slab_fill = stat(x))) +
+  ggplot(aes(x = estimate, y = type, slab_color = after_stat(x), slab_fill = after_stat(x))) +
   geom_vline(xintercept = 1, color = "grey67") +
   stat_dotsinterval(.width = .5, slab_shape = 22) +
   labs(title = expression("Parameter bias by model, algorithm, and pre/post correlation "*(rho)),
@@ -491,12 +491,6 @@ bind_rows(
         legend.position = "none") +
   facet_wrap(~ rho, labeller = label_parsed)
 ```
-
-    ## Warning: `stat(x)` was deprecated in ggplot2 3.4.0.
-    ## ℹ Please use `after_stat(x)` instead.
-
-    ## Warning: Using the `size` aesthietic with geom_segment was deprecated in ggplot2 3.4.0.
-    ## ℹ Please use the `linewidth` aesthetic instead.
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-13-1.png" width="672" />
 
@@ -511,7 +505,7 @@ bind_rows(
   mutate(type = str_c(model, ", ", method),
          rho = str_c("rho==", rho)) %>% 
   
-  ggplot(aes(x = std.error, y = type, slab_color = stat(x), slab_fill = stat(x))) +
+  ggplot(aes(x = std.error, y = type, slab_color = after_stat(x), slab_fill = after_stat(x))) +
   stat_dotsinterval(.width = .5, slab_shape = 22) +
   labs(title = expression("Parameter efficiency by model, algorithm, and pre/post correlation "*(rho)),
        x = expression(tau[s.e.]*" (causal effect standard error)"),
