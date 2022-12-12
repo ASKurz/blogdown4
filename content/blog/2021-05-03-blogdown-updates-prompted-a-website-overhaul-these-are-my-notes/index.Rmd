@@ -290,3 +290,61 @@ links:
 
 * It can be helpful to see how more-experienced users set up their `project` folders. You can find Hill's [here](https://github.com/rbind/apreshill/tree/master/content/publication) and Quintana's [here](https://github.com/dsquintana/website/tree/master/content/publication).
 
+
+### Step 17: `content/post/`.
+
+Another of the bigger changes to **blogdown** is the support for Hugo Page Bundles. To get the low-down, read through Hill's blog post, [*A spoonful of Hugo: Page bundles*](https://alison.rbind.io/post/2019-02-21-hugo-page-bundles/). In short, this system now has users arrange each blog post within its own `content/post/` subfolder.
+
+A lot of the existing **blogdown** material (e.g., [here](https://alison.rbind.io/post/2019-02-19-hugo-archetypes/#tldr-a-teaspoon-of-archetypes)) includes recommendations to use the RStudio "New Post" addin to make new blog posts. Since I was importing/reformatting a bunch of older blog posts, I ended up liking the `blogdown::new_post()` function, instead. If you've been following along linearly, we already customized a few of the `new_post()` settings in the `.Rprofile` file, above.
+
+To give a sense of what this workflow looks like, here's how I made the new page-bundle-style subfolder for my first ever **blogdown**  blog post from back in 2018.
+
+```{r, eval = F}
+blogdown::new_post(
+  title = "bookdown, My Process",
+  date = '2018-10-04',
+  slug = 'how-bookdown',
+  tags = c("Bayesian", "bookdown", "brms", "Git", "GitHub", "Markdown", "R",
+           "Statistical Rethinking", "tidyverse", "tutorial")
+)
+```
+
+Then when the `.Rmd` file popped up, I just copy/pasted the prose from the original Markdown file.
+
+The only other noteworthy part of my workflow, here, is that some of my blog posts include references managed by [Zotero](https://www.zotero.org/). One way to do this would be to make reference libraries specific to each blog post, which would be saved separately in their respective page-bundle folders. However, I'd rather just have one Zotero library for all the blog posts on my website. To make that work, I saved my `my_blog.bib` file within the `content/post/` folder, along with the `apa.csl` file, which helps me format the references in [APA style](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_style_introduction.html). Then when I want to include Zotero references within a blog post, I include the relevant information in the post's YAML metadata. For example, the YAML metadata for this very blog post[^6] contains the following:
+
+```{r, eval = F}
+bibliography: /Users/solomonkurz/Dropbox/blogdown/content/post/my_blog.bib
+biblio-style: apalike
+csl: /Users/solomonkurz/Dropbox/blogdown/content/post/apa.csl  
+link-citations: yes
+```
+
+### Step 18: The contact widget and possible next steps.
+
+You might have missed it, but the changes I made to the `config/_default/menus.yaml` file included removing the section calling the contact widget. Here's what that section looked like before I removed it:
+
+```{r, eval = F}
+  - name: Contact
+    url: '#contact'
+    weight: 70
+```
+
+As a consequence, I don't have an email contact form on my home page or as one of the other pages you might navigate from my navigation bar menu. This is, in part, because I'm not crazy about making it easy for randos to solicit me by email. But also, it's partly because I had trouble getting the widget up and running properly. Some of the blog content discussing the contact widget (e.g., [here](https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/#formspree)) appears to be either a little out of date or is not accessible enough for me to feel comfortable using. I did get as far as opening an account with [formspree](https://formspree.io/), but even that solution ended up with my test emails going to Netlify, rather than to my email. I have no doubt there are ways for skilled people to get the contact widget up and running smoothly. But to my eye, there's a black hole of accessible pedagogical material on the topic for non-technical **blogdown** users, like me. If you've had success using the **blogdown** contact widget, consider putting together a nice tutorial blog post. When you announce your nice post on [Twitter](https://twitter.com/), feel free to tag me or slip a link into my DMs.
+
+There's a similar point for the email envelope icon for the home page. Presumably the link is supposed to connect to ones email, somehow. I have no idea how that works. When you're writing your nice pedagogical blog post, consider walking that one out, too.
+
+## References
+
+[^1]: To be clear, this is not a criticism of the authors. Rather, it's an attempt to acknowledge the magnitude of their herculean undertaking.
+
+[^2]: You can learn about R Studio projects in [Chapter 8](https://r4ds.had.co.nz/workflow-projects.html) in @grolemundDataScience2017. But the real reason to use them is to keep Jenny Bryan from [setting your computer on :fire: fire :fire:](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/).
+
+[^3]: For all the deets on the [wowchemy](https://wowchemy.com/) Hugo Academic Resumé Template, go to their GitHub repo at [https://github.com/wowchemy/starter-academic](https://github.com/wowchemy/starter-academic).
+
+[^4]: To learn about how YAML metadata works for **blogdown** websites, your best bet is probably to start [here](https://bookdown.org/yihui/blogdown/content.html#yaml-metadata). If you're brave, you can also just go to the source, [https://yaml.org/](https://yaml.org/).
+
+[^5]: I know there are some strong opinions about naming conventions for files and folders, one of which is you should avoid white spaces. This has never been a problem, in my experience. You do you.
+
+[^6]: If you're really curious, you can find the files for this post [here](https://github.com/ASKurz/blogdown/tree/main/content/post/2021-05-03-blogdown-updates-prompted-a-website-overhaul-these-are-my-notes). The `index.Rmd` file is probably the one you want.
+

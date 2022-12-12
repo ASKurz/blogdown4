@@ -27,7 +27,7 @@ The purpose of this post is to highlight some of the steps I took to rebuild my 
 
 ### I don’t cover everything.
 
-This post is not an exhaustive introduction to **blogdown**. For that, you have the ebook by Xie, Hill, and Thomas ([2017](#ref-xieBlogdown2017)), [*blogdown: Creating websites with R markdown*](https://bookdown.org/yihui/blogdown/). A difficulty with that book is the authors designed it to cover a broad range of applications\[^1\], which means there isn’t enough room to cover every special case. A further difficulty is **blogdown** is something of a high-level interface for an array of more-specific software solutions (e.g., [Netlify](https://www.netlify.com/), [Hugo](https://gohugo.io/)), each of which has its own quirks. I am not going to introduce these in any great detail, either. For those purposes, you have the relevant reference manuals and other documentations available on the web.
+This post is not an exhaustive introduction to **blogdown**. For that, you have the ebook by Xie, Hill, and Thomas ([2017](#ref-xieBlogdown2017)), [*blogdown: Creating websites with R markdown*](https://bookdown.org/yihui/blogdown/). A difficulty with that book is the authors designed it to cover a broad range of applications[^1], which means there isn’t enough room to cover every special case. A further difficulty is **blogdown** is something of a high-level interface for an array of more-specific software solutions (e.g., [Netlify](https://www.netlify.com/), [Hugo](https://gohugo.io/)), each of which has its own quirks. I am not going to introduce these in any great detail, either. For those purposes, you have the relevant reference manuals and other documentations available on the web.
 
 ### This isn’t the only way.
 
@@ -43,13 +43,13 @@ Log on to your GitHub account and start a fresh repo. Name it something website-
 
 ### Step 2. RStudio projects.
 
-Make a fresh RStudio project\[^2\] to go along with your fresh GitHub repo. Within RStudio, you can do this by clicking through `File > New Project > Version Control > Git`. Next, you’ll want to paste in the URL from your GitHub repo. If you haven’t done something like this, before, go back online to your repo and click the green button near the top that’s labeled “Clone or download.” A URL will appear in there. That’s what you’ll be pasting into your new RStudio project, which will connect it to your GitHub repo. Hill discussed this [here](https://alison.rbind.io/post/new-year-new-blogdown/#step-1-create-repo).
+Make a fresh RStudio project[^2] to go along with your fresh GitHub repo. Within RStudio, you can do this by clicking through `File > New Project > Version Control > Git`. Next, you’ll want to paste in the URL from your GitHub repo. If you haven’t done something like this, before, go back online to your repo and click the green button near the top that’s labeled “Clone or download.” A URL will appear in there. That’s what you’ll be pasting into your new RStudio project, which will connect it to your GitHub repo. Hill discussed this [here](https://alison.rbind.io/post/new-year-new-blogdown/#step-1-create-repo).
 
 ## **blogdown** mini launch
 
 ### Step 3. Make a default **blogdown** site.
 
-If you haven’t already, install the current version of **blogdown** by executing `install.packages("blogdown")`. Restart **R**, if necessary. Now within a fresh session within your RStudio project, execute `blogdown::new_site(theme = "wowchemy/starter-academic")`\[^3\]. Over the next minute or two, you’ll see a handful of new files pop up in your project folder. In your console, you’ll probably notice the prompt: “Want to serve and preview the site now? (y/n)”. I recommend executing `y`, which will return a preview of your default **blogdown** website in the RStudio Viewer panel.
+If you haven’t already, install the current version of **blogdown** by executing `install.packages("blogdown")`. Restart **R**, if necessary. Now within a fresh session within your RStudio project, execute `blogdown::new_site(theme = "wowchemy/starter-academic")`[^3]. Over the next minute or two, you’ll see a handful of new files pop up in your project folder. In your console, you’ll probably notice the prompt: “Want to serve and preview the site now? (y/n)”. I recommend executing `y`, which will return a preview of your default **blogdown** website in the RStudio Viewer panel.
 
 ### Step 4. `.gitignore`.
 
@@ -199,7 +199,7 @@ I wanted to add a few `content/` sections that were not a part of the **blogdown
 -   `content/conflicts/`, which included a brief discussion of my conflicts of interest; and
 -   `content/support/`, which listed a few ways others might support my work.
 
-Since these sections were all quite simple, each subfolder only included an `_index.md` file. Each of those files contained a brief YAML\[^4\] metadata header and some [Markdown](https://rmarkdown.rstudio.com) prose.
+Since these sections were all quite simple, each subfolder only included an `_index.md` file. Each of those files contained a brief YAML[^4] metadata header and some [Markdown](https://rmarkdown.rstudio.com) prose.
 
 ### Step 13. Delete unwanted `content/` folders.
 
@@ -264,7 +264,7 @@ For my purposes, most of the work, in this section, was concentrated in the YAML
 -   It’s fine to list dates in a simple `'2020-12-01'` format.
 -   For the `publication` section, I preferred to simply list the name of the relevant journal. If desired, you can use Markdown syntax to italicize and so on.
 -   Treat the `tags` like keywords.
--   If your article has a freely-available PDF that is not locked behind a paywall, you might include that link in the `url_pdf` section. If your article is not freely available, but you’d like it to be, you can still host it on your website and include a link in the `url_pdf` section. What I did was first make a `pdf` subfolder within the static folder (i.e., `static/pdf/`). Second, I saved PDFs of my paywalled papers in that `static/pdf/` folder, with each file named by author, year, and title (your naming system might vary\[^5\]). Third, I linked to the relevant file within the relevant project subfolder. For example, one of my first papers was published with Sarah Bowen in 2012. That paper is listed in my `content/publication/Bowen & Kurz (2012a)/` subfolder. Here’s how I linked to the PDF:
+-   If your article has a freely-available PDF that is not locked behind a paywall, you might include that link in the `url_pdf` section. If your article is not freely available, but you’d like it to be, you can still host it on your website and include a link in the `url_pdf` section. What I did was first make a `pdf` subfolder within the static folder (i.e., `static/pdf/`). Second, I saved PDFs of my paywalled papers in that `static/pdf/` folder, with each file named by author, year, and title (your naming system might vary[^5]). Third, I linked to the relevant file within the relevant project subfolder. For example, one of my first papers was published with Sarah Bowen in 2012. That paper is listed in my `content/publication/Bowen & Kurz (2012a)/` subfolder. Here’s how I linked to the PDF:
 
 ``` r
 url_pdf: "pdf/Bowen & Kurz (2012) Between-session practice and therapeutic alliance as predictors of mindfulness after mindfulness-based relapse prevention.pdf"
@@ -280,11 +280,62 @@ links:
 
 -   It can be helpful to see how more-experienced users set up their `project` folders. You can find Hill’s [here](https://github.com/rbind/apreshill/tree/master/content/publication) and Quintana’s [here](https://github.com/dsquintana/website/tree/master/content/publication).
 
+### Step 17: `content/post/`.
+
+Another of the bigger changes to **blogdown** is the support for Hugo Page Bundles. To get the low-down, read through Hill’s blog post, [*A spoonful of Hugo: Page bundles*](https://alison.rbind.io/post/2019-02-21-hugo-page-bundles/). In short, this system now has users arrange each blog post within its own `content/post/` subfolder.
+
+A lot of the existing **blogdown** material (e.g., [here](https://alison.rbind.io/post/2019-02-19-hugo-archetypes/#tldr-a-teaspoon-of-archetypes)) includes recommendations to use the RStudio “New Post” addin to make new blog posts. Since I was importing/reformatting a bunch of older blog posts, I ended up liking the `blogdown::new_post()` function, instead. If you’ve been following along linearly, we already customized a few of the `new_post()` settings in the `.Rprofile` file, above.
+
+To give a sense of what this workflow looks like, here’s how I made the new page-bundle-style subfolder for my first ever **blogdown** blog post from back in 2018.
+
+``` r
+blogdown::new_post(
+  title = "bookdown, My Process",
+  date = '2018-10-04',
+  slug = 'how-bookdown',
+  tags = c("Bayesian", "bookdown", "brms", "Git", "GitHub", "Markdown", "R",
+           "Statistical Rethinking", "tidyverse", "tutorial")
+)
+```
+
+Then when the `.Rmd` file popped up, I just copy/pasted the prose from the original Markdown file.
+
+The only other noteworthy part of my workflow, here, is that some of my blog posts include references managed by [Zotero](https://www.zotero.org/). One way to do this would be to make reference libraries specific to each blog post, which would be saved separately in their respective page-bundle folders. However, I’d rather just have one Zotero library for all the blog posts on my website. To make that work, I saved my `my_blog.bib` file within the `content/post/` folder, along with the `apa.csl` file, which helps me format the references in [APA style](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_style_introduction.html). Then when I want to include Zotero references within a blog post, I include the relevant information in the post’s YAML metadata. For example, the YAML metadata for this very blog post[^6] contains the following:
+
+``` r
+bibliography: /Users/solomonkurz/Dropbox/blogdown/content/post/my_blog.bib
+biblio-style: apalike
+csl: /Users/solomonkurz/Dropbox/blogdown/content/post/apa.csl  
+link-citations: yes
+```
+
+### Step 18: The contact widget and possible next steps.
+
+You might have missed it, but the changes I made to the `config/_default/menus.yaml` file included removing the section calling the contact widget. Here’s what that section looked like before I removed it:
+
+``` r
+  - name: Contact
+    url: '#contact'
+    weight: 70
+```
+
+As a consequence, I don’t have an email contact form on my home page or as one of the other pages you might navigate from my navigation bar menu. This is, in part, because I’m not crazy about making it easy for randos to solicit me by email. But also, it’s partly because I had trouble getting the widget up and running properly. Some of the blog content discussing the contact widget (e.g., [here](https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/#formspree)) appears to be either a little out of date or is not accessible enough for me to feel comfortable using. I did get as far as opening an account with [formspree](https://formspree.io/), but even that solution ended up with my test emails going to Netlify, rather than to my email. I have no doubt there are ways for skilled people to get the contact widget up and running smoothly. But to my eye, there’s a black hole of accessible pedagogical material on the topic for non-technical **blogdown** users, like me. If you’ve had success using the **blogdown** contact widget, consider putting together a nice tutorial blog post. When you announce your nice post on [Twitter](https://twitter.com/), feel free to tag me or slip a link into my DMs.
+
+There’s a similar point for the email envelope icon for the home page. Presumably the link is supposed to connect to ones email, somehow. I have no idea how that works. When you’re writing your nice pedagogical blog post, consider walking that one out, too.
+
+## References
+
 <div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
 
 <div id="ref-bryanHappyGitGitHub2020" class="csl-entry">
 
 Bryan, J., the STAT 545 TAs, & Hester, J. (2020). *Happy Git and GitHub for the <span class="nocase">useR</span>*. <https://happygitwithr.com>
+
+</div>
+
+<div id="ref-grolemundDataScience2017" class="csl-entry">
+
+Grolemund, G., & Wickham, H. (2017). *R for data science*. O’Reilly. <https://r4ds.had.co.nz>
 
 </div>
 
@@ -301,3 +352,15 @@ Xie, Y., Hill, A. P., & Thomas, A. (2017). *<span class="nocase">blogdown</span>
 </div>
 
 </div>
+
+[^1]: To be clear, this is not a criticism of the authors. Rather, it’s an attempt to acknowledge the magnitude of their herculean undertaking.
+
+[^2]: You can learn about R Studio projects in [Chapter 8](https://r4ds.had.co.nz/workflow-projects.html) in Grolemund & Wickham ([2017](#ref-grolemundDataScience2017)). But the real reason to use them is to keep Jenny Bryan from [setting your computer on :fire: fire :fire:](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/).
+
+[^3]: For all the deets on the [wowchemy](https://wowchemy.com/) Hugo Academic Resumé Template, go to their GitHub repo at <https://github.com/wowchemy/starter-academic>.
+
+[^4]: To learn about how YAML metadata works for **blogdown** websites, your best bet is probably to start [here](https://bookdown.org/yihui/blogdown/content.html#yaml-metadata). If you’re brave, you can also just go to the source, <https://yaml.org/>.
+
+[^5]: I know there are some strong opinions about naming conventions for files and folders, one of which is you should avoid white spaces. This has never been a problem, in my experience. You do you.
+
+[^6]: If you’re really curious, you can find the files for this post [here](https://github.com/ASKurz/blogdown/tree/main/content/post/2021-05-03-blogdown-updates-prompted-a-website-overhaul-these-are-my-notes). The `index.Rmd` file is probably the one you want.
