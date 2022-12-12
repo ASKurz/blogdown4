@@ -133,6 +133,30 @@ In her post, Hill stressed it’s important to restart your RStudio session afte
 
 ## Content
 
+### Step 10. `content/authors/admin/`.
+
+Open the `content/authors/admin/_index.md` file and edit the default information to match yours, as needed. You can find Hill’s [here](https://raw.githubusercontent.com/rbind/apreshill/master/content/authors/alison/_index.md) and mine [here](https://raw.githubusercontent.com/ASKurz/blogdown/main/content/authors/admin/_index.md).
+
+Within the `content/authors/admin/` folder, switch out the `avatar.jpg` with the pic you’d like to use for your profile. As part of that process, you’ll rename your pic as `avatar.jpg`.
+
+I ended up commenting out the `icon: envelope` sub section within the `social` section, which removed the envelope icon from the array below my profile pic.
+
+#### Step 10.a. `config/_default/` folder.
+
+I wanted to enable the Google-Scholar icon. To do so, you may have to make and adjust the `params.yaml` file within the `config/_default/` folder. First, execute `rstudioapi::navigateToFile("config/_default/params.toml")` to make the folder. Second, navigate to `config/_default/params.toml` and open the file. Third, set:
+
+``` r
+icon:
+  pack:
+    ai: true
+```
+
+For me, this section was at the bottom.
+
+While in the `params.yaml` file, add your email to make the contact widget work. Edit contact info, as desired. For example, I commented out the phone number and address.
+
+I like to use a lot of `\(\LaTeX\)` formulas in my blog posts. If you would like to use `\(\LaTeX\)` in your website, too, make sure to set `math: true` within the `params.toml` file.
+
 <div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
 
 <div id="ref-bryanHappyGitGitHub2020" class="csl-entry">
