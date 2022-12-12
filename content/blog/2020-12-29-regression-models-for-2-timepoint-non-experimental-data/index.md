@@ -2148,31 +2148,6 @@ sessionInfo()
 
 ## References
 
-``` r
-nd <- distinct(small_data_long, id, time)
-
-fitted(m13, 
-       newdata = nd) %>% 
-  data.frame() %>% 
-  bind_cols(nd) %>% 
-  
-  ggplot(aes(x = time, y = Estimate, group = id)) +
-  geom_abline(intercept = fixef(m13)[1, 1],
-              slope = fixef(m13)[2, 1],
-              linewidth = 3, color = "blue") +
-  geom_line(linewidth = 1/5, alpha = 1/2) +
-  scale_x_continuous(breaks = 0:1) +
-  labs(subtitle = "Random intercepts, fixed slope",
-       y = "y") +
-  coord_cartesian(ylim = c(-1, 2))
-```
-
-<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-73-1.png" width="288" style="display: block; margin: auto;" />
-
-``` r
-ggsave("featured.jpg", width = 4, height = 3.5, units = "in")
-```
-
 <div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
 
 <div id="ref-agrestiFoundationsLinearGeneralized2015" class="csl-entry">

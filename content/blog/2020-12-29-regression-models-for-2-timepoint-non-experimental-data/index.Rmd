@@ -1502,7 +1502,7 @@ sessionInfo()
 
 [^3]: There's some debate over how to think about the repeated measures ANOVA and what its closest multilevel analogue might be. For a nice collection of perspectives, check out [this Twitter thread](https://twitter.com/SolomonKurz/status/1342645143082594304).
 
-```{r, fig.width = 3, fig.height = 3}
+```{r, eval = F, echo = F}
 nd <- distinct(small_data_long, id, time)
 
 fitted(m13, 
@@ -1520,6 +1520,6 @@ fitted(m13,
        y = "y") +
   coord_cartesian(ylim = c(-1, 2))
 
-ggsave("featured.jpg", width = 4, height = 3.5, units = "in")
+ggsave("featured.jpg", width = 3.5, height = 3.5, units = "in")
 ```
 
