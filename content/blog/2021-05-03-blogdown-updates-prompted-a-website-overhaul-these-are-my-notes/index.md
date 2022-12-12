@@ -254,7 +254,7 @@ Your millage may vary, but be warned: The changes in the next two sections ate u
 
 I’m not sure when it was added, but the publications widget was new, to me. You can get some pointers for this section in Gina Reynolds blog post, [*Creating an ‘Academic Themed’ website with blogdown and Hugo*](https://evamaerey.github.io/what_how_guides/academic_website_w_blogdown#step-14-add-your-publications-in-the-contentpublication-folder), which is itself a supplement to Dan Quintana’s tweetorial:
 
-{{% tweet "1139846569623281664" %}}
+{{% tweet user="dsquintana" id="1139846569623281664" %}}
 
 If it’s new to you, too, I **strongly recommend** you follow Quintana’s [advice](https://twitter.com/dsquintana/status/1139846908065669120) and begin by opening the `index.md` file in one of the example subfolders (e.g., `content/publication/journal-article/`) and slowly switch out the default information to match up with one of your publications. I was overly ambitious and tried to learn by building a personal subfolder by scratch. It’s easy to lose track of your mistakes, this way, and I recommend you save yourself the unnecessary aggravation by following Quintana’s advice, instead.
 
