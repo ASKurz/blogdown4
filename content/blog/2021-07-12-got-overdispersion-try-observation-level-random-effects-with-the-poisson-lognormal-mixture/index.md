@@ -411,7 +411,7 @@ p1
 Using just the posterior means for the parameters ignores the uncertainty in the distribution. To bring that into the plot, we’ll want to work with the posterior samples, themselves.
 
 ``` r
-# how many posterior ddraws would you like?
+# how many posterior draws would you like?
 n_draw <- 100
 
 set.seed(1)
@@ -436,11 +436,7 @@ p2 <-
                   ylim = c(0, 0.8)) +
   labs(title = "Population lognormal distribution",
        subtitle = "The parameters are summarized by 100 posterior draws.")
-```
 
-    ## Warning: Dropping 'draws_df' class as required metadata was removed.
-
-``` r
 p2
 ```
 

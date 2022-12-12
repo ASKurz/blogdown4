@@ -353,13 +353,6 @@ ggplot(aes(x = value, y = parameter)) +
         axis.ticks.y = element_blank())
 ```
 
-    ## Warning: Dropping 'draws_df' class as required metadata was removed.
-
-    ## Warning in stat_pointinterval(.width = 0.95, linewidth = 1/2): Ignoring unknown parameters: `linewidth`
-
-    ## Warning: Using the `size` aesthietic with geom_segment was deprecated in ggplot2 3.4.0.
-    ## ℹ Please use the `linewidth` aesthetic instead.
-
 <img src="{{< blogdown/postref >}}index_files/figure-html/d_plot-1.png" width="576" style="display: block; margin: auto;" />
 
 If you look back at the data-generating values from above, our effect sizes are about where we’d hope them to be.

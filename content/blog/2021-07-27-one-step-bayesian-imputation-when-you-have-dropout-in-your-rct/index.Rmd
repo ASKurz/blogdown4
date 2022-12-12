@@ -293,7 +293,7 @@ draws <- as_draws_df(fit2) %>%
 
 Now inspect the posteriors for our three $d$'s and the $\sigma_p^\text{pre}$ in a coefficient plot.
 
-```{r d_plot, fig.width = 6, fig.height = 1.75}
+```{r d_plot, fig.width = 6, fig.height = 1.75, warning = F}
 levels <- c(
   "sigma[italic(p)]^pre", "italic(d)['treatment - control']", 
   "italic(d)[control]", "italic(d)[treatment]"

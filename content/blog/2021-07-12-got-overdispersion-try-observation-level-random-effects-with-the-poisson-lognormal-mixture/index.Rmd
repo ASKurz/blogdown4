@@ -329,8 +329,8 @@ p1
 
 Using just the posterior means for the parameters ignores the uncertainty in the distribution. To bring that into the plot, we'll want to work with the posterior samples, themselves.
 
-```{r}
-# how many posterior ddraws would you like?
+```{r, warning = F}
+# how many posterior draws would you like?
 n_draw <- 100
 
 set.seed(1)
