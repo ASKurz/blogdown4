@@ -247,6 +247,6 @@ tibble(k = 1:100) %>%
   coord_cartesian(xlim = c(-1, 1)) +
   theme(panel.grid = element_blank())
 
-ggsave("featured.jpg", width = 4, height = 3.5, units = "in")
+ggsave("mi-standardized-featured.jpg", width = 4, height = 3.5, units = "in")
 ```
 

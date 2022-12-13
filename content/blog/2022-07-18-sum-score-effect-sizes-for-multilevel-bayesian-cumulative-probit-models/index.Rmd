@@ -556,7 +556,6 @@ d %>%
           strip.background = element_rect(fill = npp[23]),
           strip.text = element_text(color = npp[1]))
 
-
-ggsave("featured.jpg", width = 3.6, height = 3.5, units = "in")
+ggsave("d-ordinal-featured.jpg", width = 3.6, height = 3.5, units = "in")
 ```
 
