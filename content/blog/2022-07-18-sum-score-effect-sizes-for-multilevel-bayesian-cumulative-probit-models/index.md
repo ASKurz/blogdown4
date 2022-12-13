@@ -326,9 +326,7 @@ $$
 
 where `\(\mathbb{E}\)` is the expectation operator (the model-based mean), `\(p_k\)` is the probability of the `\(k^\text{th}\)` ordinal value, and `\(k\)` is the actual ordinal value. Since we have modeled the ordinal `rating` values of `\(j\)` items in a multilevel model, we might want to generalize that equation to
 
-$$
-\mathbb{E}(\text{rating}_j) = \sum_1^K p_{jk} \times k,
-$$
+`$$\mathbb{E}(\text{rating}_j) = \sum_1^K p_{jk} \times k,$$`
 
 where the probabilities now vary across `\(j\)` items and `\(k\)` rating options. Because we are computing all the `\(p_k\)` values with MCMC and expressing those values as posterior distributions, we have to perform this operation within each of our MCMC draws. In the earlier post, we practiced this by working directly with the posterior draws returned from `brms::as_draws_df()`. In this post, we’ll take a short cut with help from the `tidybayes::add_epred_draws()` function. Here’s a start.
 
