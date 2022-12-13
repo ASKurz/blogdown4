@@ -1226,10 +1226,6 @@ as_draws_df(fit22.5)  %>%
   theme(legend.justification = 0.5,
         legend.position = "none")
 
-ggsave("featured.jpg", width = 3.6, height = 3.5, units = "in")
+ggsave("cl-rough-draft-featured.jpg", width = 3.55, height = 3.5, units = "in")
 ```
-
-
-
-
 

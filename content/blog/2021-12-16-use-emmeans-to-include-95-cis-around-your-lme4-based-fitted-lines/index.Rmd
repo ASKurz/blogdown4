@@ -439,6 +439,6 @@ p6 &
         strip.background = element_rect(fill = "grey92", color = "grey92"),
         strip.text = element_text(color = "black"))
 
-ggsave("featured.jpg", width = 3.6, height = 3.5, units = "in")
+ggsave("emmeans-featured.jpg", width = 3.6, height = 3.5, units = "in")
 ```
 

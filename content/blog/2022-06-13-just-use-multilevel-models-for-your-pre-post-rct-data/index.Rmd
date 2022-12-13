@@ -529,5 +529,5 @@ bind_rows(
         strip.background = element_rect(fill = "grey92", color = "grey92"),
         strip.text = element_text(color = "black", size = 10))
 
-ggsave("featured.jpg", width = 3.6, height = 3.5, units = "in")
+ggsave("mlm-ancova-featured.jpg", width = 3.55, height = 3.5, units = "in")
 ```

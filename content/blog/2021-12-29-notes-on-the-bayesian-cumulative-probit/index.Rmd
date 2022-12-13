@@ -1734,6 +1734,6 @@ tibble(z = seq(from = -3.75, to = 3.75, length.out = 1e3)) %>%
              base_family = "Times") +
   theme(panel.grid = element_blank())
 
-ggsave("featured.jpg", width = 3.7, height = 3.5, units = "in")
+ggsave("notes-on-featured.jpg", width = 3.7, height = 3.5, units = "in")
 ```
 
