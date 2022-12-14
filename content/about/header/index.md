@@ -11,3 +11,4 @@ I am a full-time research psychologist, with a doctorate in clinical psychology 
 It's been a minute, but I'm also trained as a therapist. My primary therapeutic orientations are ACT and mindfulness-based interventions. I have had additional focused training in the areas of trauma and substance use.
 
 I also spend a lot of time making tutorial material on applied statistics, particularly from with the R computing framework.
+
