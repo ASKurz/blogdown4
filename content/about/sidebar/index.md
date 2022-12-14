@@ -17,7 +17,7 @@ link_list:
   url: https://bookdown.org/content/4253/
 - name: Statistical rethinking with brms, ggplot2, and the tidyverse
   url: https://bookdown.org/content/3890/
-- name: Statistical rethinking with brms, ggplot2, and the tidyverse: Second edition
+- name: "Statistical rethinking with brms, ggplot2, and the tidyverse: Second edition"
   url: https://bookdown.org/content/4857/
   
 # - name: Paris
